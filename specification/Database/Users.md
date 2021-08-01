@@ -6,6 +6,9 @@ CREATE TABLE `users` (
 	`email` VARCHAR(255) NULL,
     `password` VARCHAR(255) NULL,
     `gambar` VARCHAR(50) NULL,
+    `alamat` TEXT NULL,
+    `no_hp` VARCHAR(30) NULL,
+    `jenis_kelamin` TINYINT NULL,
     `role_id` TINYINT NULL,
     `status` TINYINT NULL,
 	PRIMARY KEY (`id`)

@@ -20,3 +20,16 @@
             }
         }
     }
+
+    if (!function_exists('check_sex')) {
+        function check_sex($sex)
+        {
+            if ($sex == 0) {
+                return "Perempuan";
+            }elseif ($sex == 1) {
+                return "Laki-Laki";
+            }
+        }
+    }    
+
+?>

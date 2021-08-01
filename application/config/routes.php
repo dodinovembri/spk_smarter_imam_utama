@@ -93,6 +93,7 @@ $route['ranking'] = 'RankingController';
 // routes for profile
 $route['profile'] = 'ProfileController';
 $route['profile/create'] = 'ProfileController/create';
+$route['change_password'] = 'ProfileController/change_password';
 $route['profile/store/(:any)'] = 'ProfileController/store/$1';
 $route['profile/edit/(:any)'] = 'ProfileController/edit/$1';
 $route['profile/show/(:any)'] = 'ProfileController/show/$1';

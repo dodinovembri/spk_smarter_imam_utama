@@ -39,7 +39,8 @@
 
                             <div class="box-body text-center pb-50">
                                 <a href="#">
-                                    <img class="avatar avatar-xxl avatar-bordered" src="<?php echo base_url('uploads/user/'); echo $user->gambar; ?>" alt="">
+                                    <img class="avatar avatar-xxl avatar-bordered" src="<?php echo base_url('uploads/user/');
+                                                                                        echo $user->gambar; ?>" alt="">
                                 </a>
                                 <h4 class="mt-2 mb-0"><a class="hover-primary text-white" href="#"><?php echo $user->name; ?></a></h4>
                             </div>
@@ -69,15 +70,50 @@
                         <div class="nav-tabs-custom box-profile">
                             <ul class="nav nav-tabs">
                                 <li><a class="active" href="#usertimeline" data-toggle="tab">Profile</a></li>
-                                <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                                <li><a href="#settings" data-toggle="tab">Edit Profile</a></li>
                             </ul>
 
                             <div class="tab-content">
 
                                 <div class="active tab-pane" id="usertimeline">
                                     <div class="box p-15">
-                                        <form class="form-horizontal form-element col-12" action="<?php echo base_url('profile/store/');
-                                                                                                    echo $user->id; ?>" enctype="multipart/form-data" method="POST">
+                                        <form class="form-horizontal form-element col-12" action="<?php echo base_url('profile/store/'); echo $user->id; ?>" enctype="multipart/form-data" method="POST">
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 control-label">Nama</label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="name" value="<?php echo $user->name; ?>" class="form-control" id="inputName" placeholder="" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="email" name="email" value="<?php echo $user->email; ?>" class="form-control" id="inputEmail" placeholder="" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 control-label">Alamat</label>
+
+                                                <div class="col-sm-10">
+                                                    <textarea type="text" name="alamat" class="form-control" id="inputEmail" placeholder="" readonly><?php echo $user->alamat; ?></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 control-label">No HP</label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="no_hp" value="<?php echo $user->no_hp; ?>" class="form-control" id="inputEmail" placeholder="Masukkan no hp" readonly>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="settings">
+
+                                    <div class="box p-15">
+                                        <form class="form-horizontal form-element col-12" action="<?php echo base_url('profile/store/');  echo $user->id; ?>" enctype="multipart/form-data" method="POST">
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 control-label">Nama</label>
 
@@ -100,33 +136,28 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <div class="ml-auto col-sm-10">
-                                                    <button type="submit" class="btn btn-rounded btn-success">Submit</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- /.tab-pane -->
-                                <div class="tab-pane" id="settings">
-
-                                    <div class="box p-15">
-                                        <form class="form-horizontal form-element col-12" action="<?php echo base_url('profile/store_pw/');
-                                                                                                    echo $user->id; ?>" method="POST">
-                                            <div class="form-group row">
-                                                <label for="inputName" class="col-sm-2 control-label">Password</label>
+                                                <label for="inputEmail" class="col-sm-2 control-label">Alamat</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" name="password" class="form-control" id="pass" style="width: 95%; display:inline-block" placeholder="">
-                                                    <span id="mybutton" onclick="change()"><i class="glyphicon glyphicon-eye-open"></i></span>
+                                                    <textarea type="text" name="alamat" class="form-control" id="inputEmail" placeholder=""><?php echo $user->alamat; ?></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputEmail" class="col-sm-2 control-label">Confirm Password</label>
+                                                <label for="inputEmail" class="col-sm-2 control-label">No HP</label>
 
                                                 <div class="col-sm-10">
-                                                    <input type="password" name="password_confirm" class="form-control" id="pass2" style="width: 95%; display:inline-block" placeholder="">
-                                                    <span id="mybutton2" onclick="change2()"><i class="glyphicon glyphicon-eye-open"></i></span>
+                                                    <input type="text" name="no_hp" value="<?php echo $user->no_hp; ?>" class="form-control" id="inputEmail" placeholder="Masukkan no hp" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputPassword3" class="col-sm-2 control-label">Jenis Kelamin</label>
+
+                                                <div class="col-sm-10">
+                                                    <select name="jenis_kelamin" id="" class="form-control" required>
+                                                        <option value="<?php echo $user->jenis_kelamin; ?>"><?php echo check_sex($user->jenis_kelamin) ?></option>
+                                                        <option value="1">Laki-Laki</option>
+                                                        <option value="0">Perempuan</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
