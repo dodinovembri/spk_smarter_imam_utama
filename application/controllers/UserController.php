@@ -36,6 +36,9 @@ class UserController extends CI_Controller {
         $password = $this->input->post('password');
         $password_confirm = $this->input->post('password_confirm');
         $image = $this->input->post('image');
+        $alamat = $this->input->post('alamat');
+        $no_hp = $this->input->post('no_hp');
+        $jenis_kelamin = $this->input->post('jenis_kelamin');
         $role_id = $this->input->post('role_id');
         $status = $this->input->post('status');
 
@@ -60,6 +63,9 @@ class UserController extends CI_Controller {
                     'email' => $email,
                     'password' => $password,
                     'gambar' => $this->upload->data('file_name'),
+                    'alamat' => $alamat,
+                    'no_hp' => $no_hp,
+                    'jenis_kelamin' => $jenis_kelamin,
                     'role_id' => $role_id,
                     'status' => $status
                 );
@@ -70,6 +76,9 @@ class UserController extends CI_Controller {
                     'name' => $name,
                     'email' => $email,
                     'password' => $password,
+                    'alamat' => $alamat,
+                    'no_hp' => $no_hp,
+                    'jenis_kelamin' => $jenis_kelamin,                    
                     'role_id' => $role_id,
                     'status' => $status
                 );
@@ -105,6 +114,9 @@ class UserController extends CI_Controller {
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $password_confirm = $this->input->post('password_confirm');
+        $alamat = $this->input->post('alamat');
+        $no_hp = $this->input->post('no_hp');
+        $jenis_kelamin = $this->input->post('jenis_kelamin');
         $image = $this->input->post('image');
         $role_id = $this->input->post('role_id');
         $status = $this->input->post('status');
@@ -130,6 +142,9 @@ class UserController extends CI_Controller {
                     'email' => $email,
                     'password' => $password,
                     'gambar' => $this->upload->data('file_name'),
+                    'alamat' => $alamat,
+                    'no_hp' => $no_hp,
+                    'jenis_kelamin' => $jenis_kelamin,
                     'role_id' => $role_id,
                     'status' => $status
                 );
@@ -140,6 +155,9 @@ class UserController extends CI_Controller {
                     'name' => $name,
                     'email' => $email,
                     'password' => $password,
+                    'alamat' => $alamat,
+                    'no_hp' => $no_hp,
+                    'jenis_kelamin' => $jenis_kelamin,
                     'role_id' => $role_id,
                     'status' => $status
                 );

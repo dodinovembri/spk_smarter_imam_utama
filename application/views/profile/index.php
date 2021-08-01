@@ -106,6 +106,13 @@
                                                     <input type="text" name="no_hp" value="<?php echo $user->no_hp; ?>" class="form-control" id="inputEmail" placeholder="Masukkan no hp" readonly>
                                                 </div>
                                             </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 control-label">Jenis Kelamin</label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="no_hp" value="<?php echo check_sex($user->jenis_kelamin); ?>" class="form-control" id="inputEmail" placeholder="Masukkan no hp" readonly>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>

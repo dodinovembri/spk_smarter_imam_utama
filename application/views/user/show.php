@@ -37,38 +37,60 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Nama</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" name="name" value="<?php echo $user->name; ?>" class="form-control" id="inputEmail3" placeholder="Masukkan nama" required>
+                                        <input type="text" name="name" value="<?php echo $user->name; ?>" class="form-control" id="inputEmail3" placeholder="Masukkan nama" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" name="email" value="<?php echo $user->email; ?>" class="form-control" id="inputPassword3" placeholder="Masukkan email" required>
+                                        <input type="text" name="email" value="<?php echo $user->email; ?>" class="form-control" id="inputPassword3" placeholder="Masukkan email" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputPassword3" class="col-sm-2 control-label">Gambar</label>
 
                                     <div class="col-sm-10">
-                                        <img src="<?php echo base_url('uploads/user/'); echo $user->gambar; ?>" width="20%" alt="">
+                                        <img src="<?php echo base_url('uploads/user/');
+                                                    echo $user->gambar; ?>" width="20%" alt="">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputPassword3" class="col-sm-2 control-label">Role</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" name="email" value="<?php echo check_role($user->role_id); ?>" class="form-control" id="inputPassword3" placeholder="Masukkan email" required>
+                                        <input type="text" name="email" value="<?php echo check_role($user->role_id); ?>" class="form-control" id="inputPassword3" placeholder="Masukkan email" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputEmail" class="col-sm-2 control-label">Alamat</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea type="text" name="alamat" class="form-control" id="inputEmail" placeholder="" readonly><?php echo $user->alamat; ?></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputEmail" class="col-sm-2 control-label">No HP</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" name="no_hp" value="<?php echo $user->no_hp; ?>" class="form-control" id="inputEmail" placeholder="Masukkan no hp" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputEmail" class="col-sm-2 control-label">Jenis Kelamin</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" name="no_hp" value="<?php echo check_sex($user->jenis_kelamin); ?>" class="form-control" id="inputEmail" placeholder="Masukkan no hp" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputPassword3" class="col-sm-2 control-label">Status</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" name="email" value="<?php echo check_status($user->status); ?>" class="form-control" id="inputPassword3" placeholder="Masukkan email" required>
+                                        <input type="text" name="email" value="<?php echo check_status($user->status); ?>" class="form-control" id="inputPassword3" placeholder="Masukkan email" readonly>
                                     </div>
                                 </div>
-                               <br><br>
+                                <br><br>
                                 <div class="form-group row">
                                     <label for="inputPassword3" class="col-sm-2 control-label"></label>
 
