@@ -22,6 +22,11 @@
                         <i class="nav-link-icon mdi mdi-menu text-dark"></i>
                     </a>
                 </li>
+                <li class="btn-group nav-item">
+				<a href="#" class="waves-effect waves-light nav-link rounded svg-bt-icon" style="width: 200%;" title="Full Screen">
+                    PT. Madina Investama Sejahtera
+			    </a>
+			</li>	
             </ul>
         </div>
         <?php
