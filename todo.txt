@@ -1,0 +1,2 @@
+1. ditambahin untuk lihat nilai asli dari setiap kriteria alt
+9. untuk tambah alternatif, ditambahin field nilai2 kriteria nya

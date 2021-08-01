@@ -62,8 +62,7 @@
                                             <select name="role_id" id="" class="form-control" required>
                                                 <option value="">Select</option>
                                                 <option value="0">Administrator</option>
-                                                <option value="1">Surveyor</option>
-                                                <option value="2">User</option>
+                                                <option value="1">Surveyor/ User</option>
                                             </select>
                                         </div>
                                     </div>

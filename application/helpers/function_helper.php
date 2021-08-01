@@ -5,9 +5,7 @@
             if ($role_id == 0) {
                 return "Administrator/ Pimpinan";
             }elseif ($role_id == 1) {
-                return "Surveyor";
-            }elseif ($role_id == 2) {
-                return "User";
+                return "Surveyor/ User";
             }
         }
     }

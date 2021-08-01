@@ -63,8 +63,7 @@
                                             <select name="role_id" id="" class="form-control" required>
                                                 <option value="<?php echo $user->role_id; ?>"><?php echo check_role($user->role_id); ?></option>
                                                 <option value="0">Administrator</option>
-                                                <option value="1">Surveyor</option>
-                                                <option value="2">User</option>
+                                                <option value="1">Surveyor/ User</option>
                                             </select>
                                         </div>
                                     </div>

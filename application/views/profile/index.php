@@ -10,12 +10,12 @@
             <div class="content-header">
                 <div class="d-flex align-items-center">
                     <div class="mr-auto">
-                        <h3 class="page-title">Profile</h3>
+                        <h3 class="page-title">My Profile</h3>
                         <div class="d-inline-block align-items-center">
                             <nav>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>"><i class="mdi mdi-home-outline"></i></a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                                    <li class="breadcrumb-item active" aria-current="page">My Profile</li>
                                 </ol>
                             </nav>
                         </div>
@@ -39,8 +39,7 @@
 
                             <div class="box-body text-center pb-50">
                                 <a href="#">
-                                    <img class="avatar avatar-xxl avatar-bordered" src="<?php echo base_url('uploads/user/');
-                                                                                        echo $user->gambar; ?>" alt="">
+                                    <img class="avatar avatar-xxl avatar-bordered" src="<?php echo base_url('uploads/user/'); echo $user->gambar; ?>" alt="">
                                 </a>
                                 <h4 class="mt-2 mb-0"><a class="hover-primary text-white" href="#"><?php echo $user->name; ?></a></h4>
                             </div>
@@ -69,7 +68,7 @@
 
                         <div class="nav-tabs-custom box-profile">
                             <ul class="nav nav-tabs">
-                                <li><a class="active" href="#usertimeline" data-toggle="tab">Timeline</a></li>
+                                <li><a class="active" href="#usertimeline" data-toggle="tab">Profile</a></li>
                                 <li><a href="#settings" data-toggle="tab">Settings</a></li>
                             </ul>
 

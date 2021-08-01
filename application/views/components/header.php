@@ -3,13 +3,13 @@
     <a href="<?php echo base_url('home') ?>" class="logo">
         <!-- mini logo -->
         <div class="logo-mini">
-            <span class="light-logo"><img src="<?php echo base_url('assets/images/logo-light.png') ?>" alt="logo"></span>
+            <span class="light-logo"><img src="<?php echo base_url('assets/images/logo.png') ?>" alt="logo"></span>
             <span class="dark-logo"><img src="<?php echo base_url('assets/images/logo-dark.png') ?>" alt="logo"></span>
         </div>
         <!-- logo-->
         <div class="logo-lg">
-            <span class="light-logo"><img src="<?php echo base_url('assets/images/logo-light-text.png') ?>" alt="logo"></span>
-            <span class="dark-logo"><img src="<?php echo base_url('assets/images/logo-dark-text.png') ?>" alt="logo"></span>
+            <span class="light-logo"><img src="<?php echo base_url('assets/images/logo.png') ?>" alt="logo"></span>
+            <span class="dark-logo"><img src="<?php echo base_url('assets/images/logo.png') ?>" alt="logo"></span>
         </div>
     </a>
     <!-- Header Navbar -->
@@ -42,13 +42,6 @@
                         </div>
                         <img src="<?php echo base_url('uploads/user/'); echo $user->gambar; ?>" alt="">
                     </a>
-                    <ul class="dropdown-menu animated flipInX">
-                        <li class="user-body">
-                            <a class="dropdown-item" href="<?php echo base_url('profile') ?>"><i class="ti-user text-muted mr-2"></i> Profile</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?php echo base_url('logout') ?>"><i class="ti-lock text-muted mr-2"></i> Logout</a>
-                        </li>
-                    </ul>
                 </li>
 
             </ul>

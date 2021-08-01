@@ -48,6 +48,41 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">Jarak Dengan Aspal</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" name="jarak_dengan_aspal" value="<?php echo $alternative->jarak_dengan_aspal; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">Harga</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" name="harga" value="<?php echo $alternative->harga; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 325000" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">Jarak Dengan Sarana/ Prasarana</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" name="jarak_dengan_sarana" value="<?php echo $alternative->jarak_dengan_sarana; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">Luas Lahan</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" name="luas_lahan" value="<?php echo $alternative->luas_lahan; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m2" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 control-label">Tempo Pembayaran</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" name="tempo_pembayaran" value="<?php echo $alternative->tempo_pembayaran; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 1 tahun" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label for="inputPassword3" class="col-sm-2 control-label">Keterangan</label>
 
                                     <div class="col-sm-10">

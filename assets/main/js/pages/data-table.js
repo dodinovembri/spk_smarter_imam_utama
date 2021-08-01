@@ -6,7 +6,12 @@
 $(function () {
     "use strict";
 
-    $('#example1').DataTable();
+    $('#example1').DataTable({
+      dom: 'Bfrtip',
+      buttons: [
+        'excel', 'pdf'
+      ]
+    });
     $('#example2').DataTable({
       'paging'      : true,
       'lengthChange': false,

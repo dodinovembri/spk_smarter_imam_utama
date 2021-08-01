@@ -9,12 +9,12 @@
             <div class="content-header">
                 <div class="d-flex align-items-center">
                     <div class="mr-auto">
-                        <h3 class="page-title">Alternatif</h3>
+                        <h3 class="page-title">Ranking</h3>
                         <div class="d-inline-block align-items-center">
                             <nav>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>"><i class="mdi mdi-home-outline"></i></a></li>
-                                    <li class="breadcrumb-item" aria-current="page">Alternatif</li>
+                                    <li class="breadcrumb-item" aria-current="page">Ranking</li>
                                 </ol>
                             </nav>
                         </div>
@@ -30,8 +30,6 @@
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <?php $this->load->view('components/flash') ?>
-                                <a href="<?php echo base_url('alternative/create') ?>"><button type="button" class="btn btn-primary mb-15 ml-15">Tambah Baru</button></a>
                                 <div class="table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
