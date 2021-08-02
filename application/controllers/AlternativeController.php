@@ -21,6 +21,15 @@ class AlternativeController extends CI_Controller {
 		$this->load->view('alternative/index', $data);
         $this->load->view('templates/footer');
 	}
+
+    public function alternative_value()
+	{
+        $data['alternatives'] = $this->AlternativeModel->get()->result();
+
+        $this->load->view('templates/header');
+		$this->load->view('alternative/alternative_value', $data);
+        $this->load->view('templates/footer');
+	}
     
     public function create()
     {

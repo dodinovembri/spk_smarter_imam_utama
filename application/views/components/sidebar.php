@@ -45,8 +45,9 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php if ($this->uri->segment(1) == "alternative" && $this->uri->segment(2) != "create"){ echo "active"; } ?>"><a href="<?php echo base_url('alternative') ?>"><i class="ti-more"></i>View Alternatif</a></li>
+                    <li class="<?php if ($this->uri->segment(1) == "alternative" && $this->uri->segment(2) != "create" && $this->uri->segment(2) != "alternative_value"){ echo "active"; } ?>"><a href="<?php echo base_url('alternative') ?>"><i class="ti-more"></i>View Alternatif</a></li>
                     <li class="<?php if ($this->uri->segment(1) == "alternative" && $this->uri->segment(2) == "create" ){ echo "active"; } ?>"><a href="<?php echo base_url('alternative/create') ?>"><i class="ti-more"></i>Input Alternatif</a></li>
+                    <li class="<?php if ($this->uri->segment(1) == "alternative" && $this->uri->segment(2) == "alternative_value" ){ echo "active"; } ?>"><a href="<?php echo base_url('alternative/alternative_value') ?>"><i class="ti-more"></i>Input Nilai Alternatif</a></li>
                 </ul>
             </li>  
             <li class="<?php if ($this->uri->segment(1) == "ranking"){ echo "active"; } ?>">

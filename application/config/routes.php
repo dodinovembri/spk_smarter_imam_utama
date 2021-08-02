@@ -104,6 +104,7 @@ $route['profile/store_pw/(:any)'] = 'ProfileController/store_pw/$1';
 // routes for alternative
 $route['alternative'] = 'AlternativeController';
 $route['alternative/create'] = 'AlternativeController/create';
+$route['alternative/alternative_value'] = 'AlternativeController/alternative_value';
 $route['alternative/store'] = 'AlternativeController/store';
 $route['alternative/edit/(:any)'] = 'AlternativeController/edit/$1';
 $route['alternative/show/(:any)'] = 'AlternativeController/show/$1';
