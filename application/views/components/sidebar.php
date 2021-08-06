@@ -49,13 +49,15 @@
                     <li class="<?php if ($this->uri->segment(1) == "alternative" && $this->uri->segment(2) == "create" ){ echo "active"; } ?>"><a href="<?php echo base_url('alternative/create') ?>"><i class="ti-more"></i>Input Alternatif</a></li>
                     <li class="<?php if ($this->uri->segment(1) == "alternative" && $this->uri->segment(2) == "alternative_value" ){ echo "active"; } ?>"><a href="<?php echo base_url('alternative/alternative_value') ?>"><i class="ti-more"></i>Input Nilai Alternatif</a></li>
                 </ul>
-            </li>  
-            <li class="<?php if ($this->uri->segment(1) == "ranking"){ echo "active"; } ?>">
-                <a href="<?php echo base_url('ranking') ?>">
-                    <i data-feather="award"></i>
-                    <span>Ranking</span>
-                </a>
-            </li>
+            </li> 
+            <?php if ($this->session->userdata('role_id') != 1) { ?>                
+                <li class="<?php if ($this->uri->segment(1) == "ranking"){ echo "active"; } ?>">
+                    <a href="<?php echo base_url('ranking') ?>">
+                        <i data-feather="award"></i>
+                        <span>Ranking</span>
+                    </a>
+                </li>
+            <?php } ?> 
 
             <li class="header nav-small-cap">Setting</li>
             <?php if ($this->session->userdata('role_id') != 1) { ?>                
@@ -83,7 +85,9 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="<?php if ($this->uri->segment(1) == "criteria" && $this->uri->segment(2) != "create"){ echo "active"; } ?>"><a href="<?php echo base_url('criteria') ?>"><i class="ti-more"></i>View Kriteria</a></li>
+                    <?php if ($this->session->userdata('role_id') != 1) { ?> 
                     <li class="<?php if ($this->uri->segment(1) == "criteria" && $this->uri->segment(2) == "create" ){ echo "active"; } ?>"><a href="<?php echo base_url('criteria/create') ?>"><i class="ti-more"></i>Tambah Kriteria</a></li>
+                    <?php } ?>
                 </ul>
             </li> 
             <hr>
