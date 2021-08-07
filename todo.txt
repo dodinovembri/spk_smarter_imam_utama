@@ -1,2 +1,0 @@
-1. ditambahin untuk lihat nilai asli dari setiap kriteria alt(ini maksudnya semua kriteria nya kak, ada 11, utk yang sub kriteria nya pilihan kyak tersedia/tdk dll, mungkin pakai radio atau dropdown gitu aja pilihannya)
-3. untuk tambah alternatif, ditambahin field nilai2 kriteria nya (semua kriteria)
