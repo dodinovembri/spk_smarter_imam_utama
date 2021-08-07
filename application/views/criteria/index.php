@@ -31,7 +31,7 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <?php $this->load->view('components/flash') ?>
-                                <?php if ($this->session->userdata('role_id') != 1) { ?>  
+                                <?php if ($this->session->userdata('role_id') != 1) { ?>
                                     <a href="<?php echo base_url('criteria/create') ?>"><button type="button" class="btn btn-primary mb-15 ml-15">Tambah Baru</button></a>
                                 <?php } ?>
                                 <div class="table-responsive">
@@ -41,7 +41,7 @@
                                                 <th>No</th>
                                                 <th>Kode Kriteria</th>
                                                 <th>Nama Kriteria</th>
-                                                <th>Prioritas</th>
+                                                <th>#</th>
                                                 <th>Bobot</th>
                                                 <th>Status</th>
                                                 <th class="last">Actions</th>
@@ -53,15 +53,18 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><a href="<?php echo base_url('sub_criterias/'); echo $value->id; ?>"><b><u><?php echo $value->kode_kriteria; ?></u></b></a></td>
+                                                    <td><a href="<?php echo base_url('sub_criterias/');
+                                                                    echo $value->id; ?>"><b><u><?php echo $value->kode_kriteria; ?></u></b></a></td>
                                                     <td><?php echo $value->nama_kriteria; ?></td>
                                                     <td><?php echo $value->prioritas; ?></td>
                                                     <td><?php echo $value->bobot; ?></td>
                                                     <td><?php echo check_status($value->status); ?></td>
                                                     <td class="last">
-                                                        <a href="<?php echo base_url('criteria/show/'); echo $value->id; ?>"><span class="glyphicon glyphicon-eye-open"></span></a> &nbsp;
-                                                        <?php if ($this->session->userdata('role_id') != 1) { ?>     
-                                                            <a href="<?php echo base_url('criteria/edit/'); echo $value->id; ?>"><span class="glyphicon glyphicon-pencil"></span></a> &nbsp;
+                                                        <a href="<?php echo base_url('criteria/show/');
+                                                                    echo $value->id; ?>"><span class="glyphicon glyphicon-eye-open"></span></a> &nbsp;
+                                                        <?php if ($this->session->userdata('role_id') != 1) { ?>
+                                                            <a href="<?php echo base_url('criteria/edit/');
+                                                                        echo $value->id; ?>"><span class="glyphicon glyphicon-pencil"></span></a> &nbsp;
                                                             <a href="#" data-toggle="modal" data-target="#modal-default<?php echo $value->id; ?>"><span class="glyphicon glyphicon-trash"></span></a>
                                                         <?php } ?>
                                                     </td>
@@ -80,7 +83,8 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-rounded btn-danger" data-dismiss="modal">Batal</button>
-                                                                <a href="<?php echo base_url('criteria/destroy/'); echo $value->id; ?>"><button type="button" class="btn btn-rounded btn-primary float-right">Hapus</button></a>
+                                                                <a href="<?php echo base_url('criteria/destroy/');
+                                                                            echo $value->id; ?>"><button type="button" class="btn btn-rounded btn-primary float-right">Hapus</button></a>
                                                             </div>
                                                         </div>
                                                         <!-- /.modal-content -->
