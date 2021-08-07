@@ -8,6 +8,7 @@
 						<h2 class="text-white">PORTAL LOGIN</h2>
 						<img src="<?php echo base_url('assets/login/logo.png') ?>" style="width: 30%;" alt="">
 					</div>
+					<?php $this->load->view('components/flash') ?>
 					<div class="p-30 rounded30 box-shadowed b-2 b-dashed">
 						<form action="<?php echo base_url('auth/login'); ?>" method="POST">
 							<div class="form-group">
