@@ -50,7 +50,13 @@
                                                 $no++; ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><a href="<?php echo base_url('alternative_values/'); echo $value->id; ?>"><b><u><?php echo $value->kode_alternatif; ?></u></b></a></td>
+                                                    <td>
+                                                        <?php if ($value->status == 1) { ?>
+                                                            <a href="<?php echo base_url('alternative_values/'); echo $value->id; ?>"><b><u><?php echo $value->kode_alternatif; ?></u></b></a>
+                                                        <?php }else{
+                                                            echo $value->kode_alternatif;
+                                                        } ?>
+                                                    </td>
                                                     <td><?php echo $value->nama_alternatif; ?></td>
                                                     <td><?php echo $value->keterangan; ?></td>
                                                     <td><?php echo check_status($value->status); ?></td>

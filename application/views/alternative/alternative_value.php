@@ -54,7 +54,9 @@
                                                     <td><?php echo $value->keterangan; ?></td>
                                                     <td><?php echo check_status($value->status); ?></td>
                                                     <td>
-                                                        <a href="<?php echo base_url('alternative_values/'); echo $value->id; ?>"><button class="form-control" style="width: 60px;">Pilih</button></a>
+                                                        <?php if ($value->status == 1) { ?>
+                                                            <a href="<?php echo base_url('alternative_values/'); echo $value->id; ?>"><button class="form-control" style="width: 60px;">Pilih</button></a>
+                                                        <?php } ?>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
