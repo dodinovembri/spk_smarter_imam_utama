@@ -234,7 +234,49 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>                             
+                </div>     
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <center><h4><b>Hasil Pemeringkatan - Total</b></h4></center>
+                                <div class="table-responsive">
+                                    <table id="" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Ranking</th>
+                                                <th>Kode Alternatif</th>
+                                                <th>Nama Alternatif</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 0;
+                                            foreach ($total_last_result_per_alternatives as $key => $value) {
+                                                $no++;
+                                                $id_alternatif = $value['id_alternatif'];
+                                                $sql = "SELECT * FROM alternatif WHERE id = $id_alternatif";
+                                                $query = $this->db->query($sql);
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $no; ?></td>
+                                                    <td><?php echo $query->row()->kode_alternatif; ?></td>
+                                                    <td><?php echo $value['nama_alternatif']; ?></td>
+                                                    <td><?php echo $value['total_each_last_result']; ?></td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>                                        
                 <div class="row">
                     <div class="col-12">
 

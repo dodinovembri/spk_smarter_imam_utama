@@ -273,6 +273,7 @@ class RankingController extends CI_Controller {
         $data['sub_criterias'] = $this->CriteriaModel->getWithBuilder()->result();
         $data['utility_values'] = $utility_values;
         $data['last_results'] = $last_results;
+        $data['total_last_result_per_alternative'] = $total_last_result_per_alternative;
         $data['total_last_result_per_alternatives'] = $total_last_result_per_alternative;
         
         $this->load->view('templates/header');
