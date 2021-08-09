@@ -71,6 +71,7 @@ $route['user/destroy/(:any)'] = 'UserController/destroy/$1';
 // routes for criteria
 $route['criteria'] = 'CriteriaController';
 $route['criteria/updateBobot'] = 'CriteriaController/updateBobot';
+$route['criteria/sub_criteria'] = 'CriteriaController/sub_criteria';
 $route['criteria/create'] = 'CriteriaController/create';
 $route['criteria/store'] = 'CriteriaController/store';
 $route['criteria/edit/(:any)'] = 'CriteriaController/edit/$1';
@@ -89,6 +90,7 @@ $route['sub_criteria/destroy/(:any)'] = 'SubCriteriaController/destroy/$1';
 
 // routes for ranking
 $route['ranking'] = 'RankingController';
+$route['smarter'] = 'RankingController/smarter';
 
 // routes for profile
 $route['profile'] = 'ProfileController';

@@ -14,7 +14,7 @@
                             <nav>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>"><i class="mdi mdi-home-outline"></i></a></li>
-                                    <li class="breadcrumb-item"><a href="<?php echo base_url('criteria') ?>">Kriteria</a></li>
+                                    <li class="breadcrumb-item"><a href="<?php if(isset($from_sub)){ echo base_url('criteria/sub_criteria'); }else{echo base_url('criteria'); } ?>">Kriteria</a></li>
                                     <li class="breadcrumb-item" aria-current="page">Sub Kriteria</li>
                                 </ol>
                             </nav>

@@ -42,7 +42,6 @@
 
                                             <div class="col-sm-10">
                                                 <select name="criteria_criterion[]" id="" class="form-control" required>
-                                                    <option value="">Pilih</option>
                                                     <?php
                                                     $id_kriteria = $value->id;
                                                     $sql = "SELECT * FROM sub_kriteria WHERE id_kriteria = $id_kriteria";

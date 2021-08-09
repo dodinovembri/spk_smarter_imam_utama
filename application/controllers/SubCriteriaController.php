@@ -17,7 +17,8 @@ class SubCriteriaController extends CI_Controller {
         $this->session->set_userdata($criteria);
 
         $data['sub_criterias'] = $this->SubCriteriaModel->getWithBuilder($id)->result();
-
+        $data['from_sub'] = 1;
+        
         $this->load->view('templates/header');
 		$this->load->view('sub_criteria/index', $data);
         $this->load->view('templates/footer');

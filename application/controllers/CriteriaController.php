@@ -19,6 +19,15 @@ class CriteriaController extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function sub_criteria()
+    {
+        $data['criterias'] = $this->CriteriaModel->get()->result();
+
+        $this->load->view('templates/header');
+        $this->load->view('criteria/index_sub_criteria', $data);
+        $this->load->view('templates/footer');
+    }
+
     public function create()
     {
         $this->load->view('templates/header');

@@ -12,6 +12,11 @@ class CriteriaModel extends CI_Model
     	return $this->db->get($this->_table);
     }
 
+    public function getWithBuilder()
+    {
+        return $this->db->query("SELECT sub_kriteria.*, kriteria.nama_kriteria AS nama_kriteria FROM sub_kriteria JOIN kriteria ON sub_kriteria.id_kriteria = kriteria.id");
+    }    
+
     public function insert($data)
     {
         return $this->db->insert($this->_table, $data);

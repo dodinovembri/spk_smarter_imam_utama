@@ -51,6 +51,12 @@
                 </ul>
             </li> 
             <?php if ($this->session->userdata('role_id') != 1) { ?>                
+                <li class="<?php if ($this->uri->segment(1) == "smarter"){ echo "active"; } ?>">
+                    <a href="<?php echo base_url('smarter') ?>">
+                        <i data-feather="award"></i>
+                        <span>Tahapan Smarter</span>
+                    </a>
+                </li>
                 <li class="<?php if ($this->uri->segment(1) == "ranking"){ echo "active"; } ?>">
                     <a href="<?php echo base_url('ranking') ?>">
                         <i data-feather="award"></i>
@@ -84,9 +90,10 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="<?php if ($this->uri->segment(1) == "criteria" && $this->uri->segment(2) != "create"){ echo "active"; } ?>"><a href="<?php echo base_url('criteria') ?>"><i class="ti-more"></i>View Kriteria</a></li>
+                    <li class="<?php if ($this->uri->segment(1) == "criteria" && $this->uri->segment(2) != "create" && $this->uri->segment(2) != "sub_criteria"){ echo "active"; } ?>"><a href="<?php echo base_url('criteria') ?>"><i class="ti-more"></i>View Kriteria</a></li>
                     <?php if ($this->session->userdata('role_id') != 1) { ?> 
                     <li class="<?php if ($this->uri->segment(1) == "criteria" && $this->uri->segment(2) == "create" ){ echo "active"; } ?>"><a href="<?php echo base_url('criteria/create') ?>"><i class="ti-more"></i>Tambah Kriteria</a></li>
+                    <li class="<?php if ($this->uri->segment(1) == "criteria" && $this->uri->segment(2) == "sub_criteria" ){ echo "active"; } ?>"><a href="<?php echo base_url('criteria/sub_criteria') ?>"><i class="ti-more"></i>View Sub Kriteria</a></li>
                     <?php } ?>
                 </ul>
             </li> 

@@ -57,9 +57,21 @@ $(function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
     } );
+
+    $('#example10 tfoot th').each( function () {
+      var title = $(this).text();
+      $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+    $('#example11 tfoot th').each( function () {
+      var title = $(this).text();
+      $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
  
     // DataTable
     var table = $('#example5').DataTable();
+    var table = $('#example10').DataTable();
+    var table = $('#example11').DataTable();
  
     // Apply the search
     table.columns().every( function () {
