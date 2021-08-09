@@ -83,15 +83,15 @@
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($criterias as $key => $value) {
+                                            foreach ($criterias as $key2 => $value2) {
                                                 $no++;
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $value->kode_kriteria; ?></td>
-                                                    <td><?php echo $value->nama_kriteria; ?></td>
-                                                    <td><?php echo $value->prioritas; ?></td>
-                                                    <td><?php echo $value->bobot; ?></td>
+                                                    <td><?php echo $value2->kode_kriteria; ?></td>
+                                                    <td><?php echo $value2->nama_kriteria; ?></td>
+                                                    <td><?php echo $value2->prioritas; ?></td>
+                                                    <td><?php echo $value2->bobot; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -124,15 +124,15 @@
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($sub_criterias as $key => $value) {
+                                            foreach ($sub_criterias as $key3 => $value3) {
                                                 $no++;
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $value->nama_kriteria; ?></td>
-                                                    <td><?php echo $value->nama_sub_kriteria; ?></td>
-                                                    <td><?php echo $value->prioritas; ?></td>
-                                                    <td><?php echo $value->bobot; ?></td>
+                                                    <td><?php echo $value3->nama_kriteria; ?></td>
+                                                    <td><?php echo $value3->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $value3->prioritas; ?></td>
+                                                    <td><?php echo $value3->bobot; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -165,18 +165,15 @@
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($utility_values as $key => $value) {
+                                            foreach ($utility_values as $key4 => $value4) {
                                                 $no++;
-                                                $id_alternatif = $value['id_alternatif'];
-                                                $sql = "SELECT * FROM alternatif WHERE id = $id_alternatif";
-                                                $query = $this->db->query($sql);
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $value['nama_alternatif']; ?></td>
-                                                    <td><?php echo $value['nama_kriteria']; ?></td>
-                                                    <td><?php echo $value['nama_sub_kriteria']; ?></td>
-                                                    <td><?php echo $value['utility']; ?></td>
+                                                    <td><?php echo $value4['nama_alternatif']; ?></td>
+                                                    <td><?php echo $value4['nama_kriteria']; ?></td>
+                                                    <td><?php echo $value4['nama_sub_kriteria']; ?></td>
+                                                    <td><?php echo $value4['utility']; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -210,19 +207,16 @@
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($last_results as $key => $value) {
+                                            foreach ($last_results as $key5 => $value5) {
                                                 $no++;
-                                                $id_alternatif = $value['id_alternatif'];
-                                                $sql = "SELECT * FROM alternatif WHERE id = $id_alternatif";
-                                                $query = $this->db->query($sql);
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $value['nama_alternatif']; ?></td>
-                                                    <td><?php echo $value['nama_kriteria']; ?></td>
-                                                    <td><?php echo $value['nama_sub_kriteria']; ?></td>
-                                                    <td><?php echo $value['utility']; ?></td>
-                                                    <td><?php echo $value['last_result']; ?></td>
+                                                    <td><?php echo $value5['nama_alternatif']; ?></td>
+                                                    <td><?php echo $value5['nama_kriteria']; ?></td>
+                                                    <td><?php echo $value5['nama_sub_kriteria']; ?></td>
+                                                    <td><?php echo $value5['utility']; ?></td>
+                                                    <td><?php echo $value5['last_result']; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -247,24 +241,22 @@
                                         <thead>
                                             <tr>
                                                 <th>Ranking</th>
-                                                <th>Kode Alternatif</th>
                                                 <th>Nama Alternatif</th>
                                                 <th>Total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($total_last_result_per_alternatives as $key => $value) {
+                                            foreach ($total_last_result_per_alternatives as $key6 => $value6) {
                                                 $no++;
-                                                $id_alternatif = $value['id_alternatif'];
-                                                $sql = "SELECT * FROM alternatif WHERE id = $id_alternatif";
-                                                $query = $this->db->query($sql);
+                                                $id_alternatif = $value6['id_alternatif'];
+                                                $sql6 = "SELECT * FROM alternatif WHERE id = $id_alternatif";
+                                                $query6 = $this->db->query($sql6);
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $query->row()->kode_alternatif; ?></td>
-                                                    <td><?php echo $value['nama_alternatif']; ?></td>
-                                                    <td><?php echo $value['total_each_last_result']; ?></td>
+                                                    <td><?php echo $query6->row()->nama_alternatif; ?></td>
+                                                    <td><?php echo $value6['total_each_last_result']; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -289,7 +281,6 @@
                                         <thead>
                                             <tr>
                                                 <th>Ranking</th>
-                                                <th>Kode Alternatif</th>
                                                 <th>Nama Alternatif</th>
                                                 <th>NA</th>
                                                 <th>%</th>
@@ -298,21 +289,20 @@
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($total_last_result_per_alternatives as $key => $value) {
+                                            foreach ($total_last_result_per_alternatives as $key7 => $value7) {
                                                 $no++;
-                                                $id_alternatif = $value['id_alternatif'];
-                                                $sql = "SELECT * FROM alternatif WHERE id = $id_alternatif";
-                                                $query = $this->db->query($sql);
+                                                $id_alternatif = $value7['id_alternatif'];
+                                                $sql7 = "SELECT * FROM alternatif WHERE id = $id_alternatif";
+                                                $query7 = $this->db->query($sql7);
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $query->row()->kode_alternatif; ?></td>
-                                                    <td><?php echo $value['nama_alternatif']; ?></td>
-                                                    <td><?php echo $value['total_each_last_result']; ?></td>
-                                                    <td><?php echo $value['total_each_last_result'] * 100; ?></td>
+                                                    <td><?php echo $query7->row()->nama_alternatif; ?></td>
+                                                    <td><?php echo $value7['total_each_last_result']; ?></td>
+                                                    <td><?php echo $value7['total_each_last_result'] * 100; ?></td>
                                                     <td>
                                                         <a href="<?php echo base_url('alternative/show/');
-                                                                    echo $query->row()->id; ?>"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                                                    echo $value7['id_alternatif']; ?>"><span class="glyphicon glyphicon-eye-open"></span></a>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
