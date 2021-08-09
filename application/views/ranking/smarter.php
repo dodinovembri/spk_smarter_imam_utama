@@ -276,14 +276,14 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>                                        
+                </div>                                       
                 <div class="row">
                     <div class="col-12">
 
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Hasil Pemeringkatan</b></h4></center>
+                                <center><h4><b>Ranking</b></h4></center>
                                 <div class="table-responsive">
                                     <table id="" class="table table-bordered table-striped">
                                         <thead>
