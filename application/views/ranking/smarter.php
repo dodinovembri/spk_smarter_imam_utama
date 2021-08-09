@@ -32,7 +32,7 @@
                             <div class="box-body">
                                 <center><h4><b>Kriteria</b></h4></center>
                                 <div class="table-responsive">
-                                    <table id="" class="table table-bordered table-striped">
+                                    <table id="example13" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -71,7 +71,7 @@
                             <div class="box-body">
                                 <center><h4><b>Pembobotan ROC</b></h4></center>
                                 <div class="table-responsive">
-                                    <table id="" class="table table-bordered table-striped">
+                                    <table id="example14" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
@@ -237,7 +237,7 @@
                             <div class="box-body">
                                 <center><h4><b>Hasil Pemeringkatan - Total</b></h4></center>
                                 <div class="table-responsive">
-                                    <table id="" class="table table-bordered table-striped">
+                                    <table id="example15" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Ranking</th>
@@ -277,7 +277,7 @@
                             <div class="box-body">
                                 <center><h4><b>Ranking</b></h4></center>
                                 <div class="table-responsive">
-                                    <table id="" class="table table-bordered table-striped">
+                                    <table id="example16" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Ranking</th>

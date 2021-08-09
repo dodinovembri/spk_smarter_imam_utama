@@ -67,11 +67,41 @@ $(function () {
       var title = $(this).text();
       $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
     } );
+
+    $('#example12 tfoot th').each( function () {
+      var title = $(this).text();
+      $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+    $('#example13 tfoot th').each( function () {
+      var title = $(this).text();
+      $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+    $('#example14 tfoot th').each( function () {
+      var title = $(this).text();
+      $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
  
+    $('#example15 tfoot th').each( function () {
+      var title = $(this).text();
+      $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+    $('#example16 tfoot th').each( function () {
+      var title = $(this).text();
+      $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
     // DataTable
     var table = $('#example5').DataTable();
     var table = $('#example10').DataTable();
     var table = $('#example11').DataTable();
+    var table = $('#example12').DataTable();
+    var table = $('#example13').DataTable();
+    var table = $('#example14').DataTable();
+    var table = $('#example15').DataTable();
+    var table = $('#example16').DataTable();
  
     // Apply the search
     table.columns().every( function () {
