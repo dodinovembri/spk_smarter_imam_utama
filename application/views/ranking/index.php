@@ -53,7 +53,7 @@
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
                                                     <td><?php echo $query->row()->kode_alternatif; ?></td>
-                                                    <td><?php echo $value['nama_alternatif']; ?></td>
+                                                    <td><?php echo $query->row()->nama_alternatif; ?></td>
                                                     <td><?php echo $value['total_each_last_result']; ?></td>
                                                     <td><?php echo $value['total_each_last_result'] * 100; ?></td>
                                                     <td>
