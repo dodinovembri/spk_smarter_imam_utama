@@ -38,56 +38,56 @@
                                         <label for="inputEmail3" class="col-sm-2 control-label">Kode Alternatif</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="kode_alternatif" value="<?php echo $alternative->kode_alternatif; ?>" class="form-control" id="inputEmail3" placeholder="Masukkan kode alternatif" required>
+                                            <input type="text" name="kode_alternatif" value="<?php echo $alternative->kode_alternatif; ?>" class="form-control" id="inputEmail3" placeholder="Masukkan kode alternatif" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Nama Alternatif</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="nama_alternatif" value="<?php echo $alternative->nama_alternatif; ?>" class="form-control" id="inputPassword3" placeholder="Masukkan nama alternatif" required>
+                                            <input type="text" name="nama_alternatif" value="<?php echo $alternative->nama_alternatif; ?>" class="form-control" id="inputPassword3" placeholder="Masukkan nama alternatif" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Jarak Dengan Aspal</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="jarak_dengan_aspal" value="<?php echo $alternative->jarak_dengan_aspal; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m" required>
+                                            <input type="text" name="jarak_dengan_aspal" value="<?php echo $alternative->jarak_dengan_aspal; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Harga</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="harga" value="<?php echo $alternative->harga; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 325000" required>
+                                            <input type="text" name="harga" value="<?php echo $alternative->harga; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 325000" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Jarak Dengan Sarana/ Prasarana</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="jarak_dengan_sarana" value="<?php echo $alternative->jarak_dengan_sarana; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m" required>
+                                            <input type="text" name="jarak_dengan_sarana" value="<?php echo $alternative->jarak_dengan_sarana; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Luas Lahan</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="luas_lahan" value="<?php echo $alternative->luas_lahan; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m2" required>
+                                            <input type="text" name="luas_lahan" value="<?php echo $alternative->luas_lahan; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 200 m2" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Tempo Pembayaran</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="tempo_pembayaran" value="<?php echo $alternative->tempo_pembayaran; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 1 tahun" required>
+                                            <input type="text" name="tempo_pembayaran" value="<?php echo $alternative->tempo_pembayaran; ?>" class="form-control" id="inputPassword3" placeholder="e.g: 1 tahun" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Keterangan</label>
 
                                         <div class="col-sm-10">
-                                            <textarea name="keterangan" rows="5" class="form-control" id="inputPassword3"><?php echo $alternative->keterangan; ?></textarea>
+                                            <textarea name="keterangan" rows="5" class="form-control" id="inputPassword3" <?php if($alternative->status == 0 ){echo "readonly"; }else{echo "required"; } ?>><?php echo $alternative->keterangan; ?></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">

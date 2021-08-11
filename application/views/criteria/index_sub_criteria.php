@@ -31,9 +31,6 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <?php $this->load->view('components/flash') ?>
-                                <?php if ($this->session->userdata('role_id') != 1) { ?>
-                                    <a href="<?php echo base_url('criteria/create') ?>"><button type="button" class="btn btn-primary mb-15 ml-15">Tambah Baru</button></a>
-                                <?php } ?>
                                 <div class="table-responsive">
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
@@ -59,7 +56,9 @@
                                                     <td><?php echo $value->bobot; ?></td>
                                                     <td><?php echo check_status($value->status); ?></td>
                                                     <td class="last">
-                                                        <a href="<?php echo base_url('sub_criterias/'); echo $value->id; ?>"><button class="form-control" style="width: 60px;">Pilih</button></a>
+                                                        <?php if ($value->status == 1) { ?>
+                                                            <a href="<?php echo base_url('sub_criterias/'); echo $value->id; ?>"><button class="form-control" style="width: 60px;">Pilih</button></a>
+                                                        <?php } ?>
                                                     </td>
                                                 </tr>
                                             <?php } ?>

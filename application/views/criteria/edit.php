@@ -38,21 +38,21 @@
                                         <label for="inputEmail3" class="col-sm-2 control-label">Kode Kriteria</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="kode_kriteria" value="<?php echo $criteria->kode_kriteria ?>" class="form-control" id="inputEmail3" placeholder="Masukkan kode kriteria" required>
+                                            <input type="text" name="kode_kriteria" value="<?php echo $criteria->kode_kriteria ?>" class="form-control" id="inputEmail3" placeholder="Masukkan kode kriteria" <?php if($criteria->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Nama Kriteria</label>
 
                                         <div class="col-sm-10">
-                                            <input type="text" name="nama_kriteria" value="<?php echo $criteria->nama_kriteria ?>" class="form-control" id="inputPassword3" placeholder="Masukkan nama kriteria" required>
+                                            <input type="text" name="nama_kriteria" value="<?php echo $criteria->nama_kriteria ?>" class="form-control" id="inputPassword3" placeholder="Masukkan nama kriteria" <?php if($criteria->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="inputPassword3" class="col-sm-2 control-label">Prioritas</label>
 
                                         <div class="col-sm-10">
-                                            <input type="number" name="prioritas" value="<?php echo $criteria->prioritas ?>" class="form-control" id="inputPassword3" min="1" placeholder="Masukkan prioritas" required>
+                                            <input type="number" name="prioritas" value="<?php echo $criteria->prioritas ?>" class="form-control" id="inputPassword3" min="1" placeholder="Masukkan prioritas" <?php if($criteria->status == 0 ){echo "readonly"; }else{echo "required"; } ?>>
                                         </div>
                                     </div>
                                     <div class="form-group row">
