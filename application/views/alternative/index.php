@@ -52,8 +52,10 @@
                                                     <td><?php echo $no; ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) { ?>
-                                                            <a href="<?php echo base_url('alternative_values/'); echo $value->id; ?>"><b><u><?php echo $value->kode_alternatif; ?></u></b></a>
-                                                        <?php }else{
+                                                            <!-- <a href="<?php echo base_url('alternative_values/');
+                                                                            echo $value->id; ?>"><b><u><?php echo $value->kode_alternatif; ?></u></b></a> -->
+                                                            <?php echo $value->kode_alternatif; ?>
+                                                        <?php } else {
                                                             echo $value->kode_alternatif;
                                                         } ?>
                                                     </td>
@@ -82,7 +84,8 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-rounded btn-danger" data-dismiss="modal">Batal</button>
-                                                                <a href="<?php echo base_url('alternative/destroy/'); echo $value->id; ?>"><button type="button" class="btn btn-rounded btn-primary float-right">Hapus</button></a>
+                                                                <a href="<?php echo base_url('alternative/destroy/');
+                                                                            echo $value->id; ?>"><button type="button" class="btn btn-rounded btn-primary float-right">Hapus</button></a>
                                                             </div>
                                                         </div>
                                                         <!-- /.modal-content -->

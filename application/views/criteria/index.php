@@ -55,8 +55,10 @@
                                                     <td><?php echo $no; ?></td>
                                                     <td>
                                                         <?php if ($value->status == 1) { ?>
-                                                            <a href="<?php echo base_url('sub_criterias/'); echo $value->id; ?>"><b><u><?php echo $value->kode_kriteria; ?></u></b></a>
-                                                        <?php }else{
+                                                            <!-- <a href="<?php echo base_url('sub_criterias/');
+                                                                            echo $value->id; ?>"><b><u><?php echo $value->kode_kriteria; ?></u></b></a> -->
+                                                            <?php echo $value->kode_kriteria; ?>
+                                                        <?php } else {
                                                             echo $value->kode_kriteria;
                                                         } ?>
 
