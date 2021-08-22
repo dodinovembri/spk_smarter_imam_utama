@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class AuthController extends CI_Controller { 
+class AuthController extends CI_Controller
+{
 
     function __construct()
     {
@@ -12,12 +13,12 @@ class AuthController extends CI_Controller {
         }
     }
 
-	public function index()
-	{
+    public function index()
+    {
         $this->load->view('templates/header');
         $this->load->view('auth/login');
         $this->load->view('templates/footer');
-	}
+    }
 
     public function login()
     {
@@ -28,18 +29,18 @@ class AuthController extends CI_Controller {
         if ($check_auth) {
             $role_name = check_role($check_auth->role_id);
             $auth = array(
-                    'id'        => $check_auth->id,
-                    'name'      => $check_auth->name,
-                    'email'     => $check_auth->email,
-                    'role_id'   => $check_auth->role_id,
-                    'role_name' => $role_name,
-                    'image'     => $check_auth->image,
-                    'logged_in' => 1,
+                'id'        => $check_auth->id,
+                'name'      => $check_auth->name,
+                'email'     => $check_auth->email,
+                'role_id'   => $check_auth->role_id,
+                'role_name' => $role_name,
+                'image'     => $check_auth->image,
+                'logged_in' => 1,
             );
-            
+
             $this->session->set_userdata($auth);
             return redirect(base_url('home'));
-        }else{
+        } else {
             $this->session->set_flashdata('warning', "Email or Password is wrong!");
             return redirect(base_url('login'));
         }
@@ -51,5 +52,5 @@ class AuthController extends CI_Controller {
         $this->session->set_flashdata('success', 'User Logout successfully');
 
         return redirect(base_url('login'));
-    }  
+    }
 }
