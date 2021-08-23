@@ -69,7 +69,7 @@
                                 echo "active";
                             } ?>">
                     <a href="<?php echo base_url('smarter') ?>">
-                        <i data-feather="file-text"></i>
+                        <i data-feather="grid"></i>
                         <span>Metode Smarter</span>
                     </a>
                 </li>
@@ -109,7 +109,8 @@
                                     echo "active menu-open";
                                 } ?>">
                 <a href="#">
-                    <i data-feather="grid"></i>
+                    <i data-feather="file-text"></i>
+
                     <span>Kriteria</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>

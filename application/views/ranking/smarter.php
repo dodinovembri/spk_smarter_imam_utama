@@ -9,12 +9,12 @@
             <div class="content-header">
                 <div class="d-flex align-items-center">
                     <div class="mr-auto">
-                        <h3 class="page-title">Ranking</h3>
+                        <h3 class="page-title">Metode SMARTER</h3>
                         <div class="d-inline-block align-items-center">
                             <nav>
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="<?php echo base_url('/') ?>"><i class="mdi mdi-home-outline"></i></a></li>
-                                    <li class="breadcrumb-item" aria-current="page">Ranking</li>
+                                    <li class="breadcrumb-item" aria-current="page">Metode SMARTER</li>
                                 </ol>
                             </nav>
                         </div>
@@ -30,7 +30,9 @@
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Kriteria</b></h4></center>
+                                <center>
+                                    <h4><b>Kriteria</b></h4>
+                                </center>
                                 <div class="table-responsive">
                                     <table id="example13" class="table table-bordered table-striped">
                                         <thead>
@@ -62,14 +64,16 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>          
+                </div>
                 <div class="row">
                     <div class="col-12">
 
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Pembobotan ROC</b></h4></center>
+                                <center>
+                                    <h4><b>Pembobotan ROC</b></h4>
+                                </center>
                                 <div class="table-responsive">
                                     <table id="example14" class="table table-bordered table-striped">
                                         <thead>
@@ -103,14 +107,16 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>  
+                </div>
                 <div class="row">
                     <div class="col-12">
 
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Pembobotan ROC Pada Sub Kriteria</b></h4></center>
+                                <center>
+                                    <h4><b>Pembobotan ROC Pada Sub Kriteria</b></h4>
+                                </center>
                                 <div class="table-responsive">
                                     <table id="example11" class="table table-bordered table-striped">
                                         <thead>
@@ -144,14 +150,16 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>                               
+                </div>
                 <div class="row">
                     <div class="col-12">
 
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Nilai Utility</b></h4></center>
+                                <center>
+                                    <h4><b>Nilai Utility</b></h4>
+                                </center>
                                 <div class="table-responsive">
                                     <table id="example5" class="table table-bordered table-striped">
                                         <thead>
@@ -185,14 +193,16 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>        
+                </div>
                 <div class="row">
                     <div class="col-12">
 
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Nilai Akhir Metode SMARTER</b></h4></center>
+                                <center>
+                                    <h4><b>Nilai Akhir Metode SMARTER</b></h4>
+                                </center>
                                 <div class="table-responsive">
                                     <table id="example10" class="table table-bordered table-striped">
                                         <thead>
@@ -228,14 +238,16 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>     
+                </div>
                 <div class="row">
                     <div class="col-12">
 
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Hasil Pemeringkatan - Total</b></h4></center>
+                                <center>
+                                    <h4><b>Hasil Pemeringkatan - Total</b></h4>
+                                </center>
                                 <div class="table-responsive">
                                     <table id="example15" class="table table-bordered table-striped">
                                         <thead>
@@ -268,14 +280,16 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>                                       
+                </div>
                 <div class="row">
                     <div class="col-12">
 
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <center><h4><b>Ranking</b></h4></center>
+                                <center>
+                                    <h4><b>Ranking</b></h4>
+                                </center>
                                 <div class="table-responsive">
                                     <table id="example16" class="table table-bordered table-striped">
                                         <thead>
