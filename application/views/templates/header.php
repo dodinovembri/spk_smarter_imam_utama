@@ -13,9 +13,9 @@
 		<title>Authentication - SPK-PLPP </title>
 		<?php } else {
 		if ($this->session->userdata('role_id') == 0) { ?>
-			<title>Administrator - SPK-PLPP </title>
+			<title>Pimpinan - SPK-PLPP </title>
 		<?php } elseif ($this->session->userdata('role_id') == 1) { ?>
-			<title>User - SPK-PLPP </title>
+			<title>Surveyor - SPK-PLPP </title>
 		<?php } ?>
 	<?php } ?>
 
