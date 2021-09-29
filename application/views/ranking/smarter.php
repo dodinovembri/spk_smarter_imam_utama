@@ -151,6 +151,238 @@
                     </div>
                     <!-- /.col -->
                 </div>
+
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <center>
+                                    <h4><b>Sebelum Ditransformasikan pada Bobot Sub Kriteria</b></h4>
+                                </center>
+                                <div class="table-responsive">
+                                    <table id="example17" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Alternatif</th>
+                                                <th>C1</th>
+                                                <th>C2</th>
+                                                <th>C3</th>
+                                                <th>C4</th>
+                                                <th>C5</th>
+                                                <th>C6</th>
+                                                <th>C7</th>
+                                                <th>C8</th>
+                                                <th>C9</th>
+                                                <th>C10</th>
+                                                <th>C11</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 0;
+                                            foreach ($alternatives as $key8 => $value8) {
+                                                $no++;
+                                            ?>
+                                            <?php 
+                                                $CI =& get_instance();
+                                                $CI->load->model(['AlternativeValueModel', 'AlternativeModel']);
+                                                $al = $CI->AlternativeModel->getById($value8->id)->row(); 
+                                                $al_values = $CI->AlternativeValueModel->getWithBuilder($value8->id)->result(); 
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $no; ?></td>
+                                                    <td><?php echo $al->kode_alternatif; ?></td>
+                                                    <td><?php echo $al_values[0]->nama_kriteria ?></td>
+                                                    <td><?php echo $al_values[1]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[2]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[3]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[4]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[5]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[6]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[7]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[8]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[9]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[10]->nama_kriteria; ?></td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <center>
+                                    <h4><b>Sesudah Ditransformasikan pada Bobot Sub Kriteria</b></h4>
+                                </center>
+                                <div class="table-responsive">
+                                    <table id="example17" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Alternatif</th>
+                                                <th>C1</th>
+                                                <th>C2</th>
+                                                <th>C3</th>
+                                                <th>C4</th>
+                                                <th>C5</th>
+                                                <th>C6</th>
+                                                <th>C7</th>
+                                                <th>C8</th>
+                                                <th>C9</th>
+                                                <th>C10</th>
+                                                <th>C11</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $no = 0;
+                                            foreach ($alternatives as $key9 => $value9) {
+                                                $no++;
+                                            ?>
+                                            <?php 
+                                                $CI =& get_instance();
+                                                $CI->load->model(['AlternativeValueModel', 'AlternativeModel']);
+                                                $al = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                $al_values = $CI->AlternativeValueModel->getWithBuilder($value9->id)->result(); 
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $no; ?></td>
+                                                    <td><?php echo $al->kode_alternatif; ?></td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[0]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[1]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[2]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[3]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[4]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[5]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[6]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[7]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[8]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[9]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                    <td>
+                                                        <?php 
+                                                            $CI =& get_instance();
+                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
+                                                            $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
+                                                            $criteria = $CI->CriteriaModel->getById($al_val[10]->id_kriteria)->row(); 
+                                                            echo $criteria->bobot 
+                                                        ?>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+
                 <div class="row">
                     <div class="col-12">
 
@@ -165,23 +397,45 @@
                                         <thead>
                                             <tr>
                                                 <th>Ranking</th>
-                                                <th>Nama Alternatif</th>
-                                                <th>Nama Kriteria</th>
-                                                <th>Nama Sub Kriteria</th>
-                                                <th>Nilai Utility</th>
+                                                <th>Alternatif</th>
+                                                <th>C1</th>
+                                                <th>C2</th>
+                                                <th>C3</th>
+                                                <th>C4</th>
+                                                <th>C5</th>
+                                                <th>C6</th>
+                                                <th>C7</th>
+                                                <th>C8</th>
+                                                <th>C9</th>
+                                                <th>C10</th>
+                                                <th>C11</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($utility_values as $key4 => $value4) {
+                                            foreach ($alternatives as $key4 => $value4) {
                                                 $no++;
+                                            ?>
+                                            <?php 
+                                                $CI =& get_instance();
+                                                $CI->load->model(['UtilityValueModel', 'AlternativeModel']);
+                                                $al = $CI->AlternativeModel->getById($value4->id)->row(); 
+                                                $al_values_u = $CI->UtilityValueModel->getByIds($value4->id)->result();
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $value4['nama_alternatif']; ?></td>
-                                                    <td><?php echo $value4['nama_kriteria']; ?></td>
-                                                    <td><?php echo $value4['nama_sub_kriteria']; ?></td>
-                                                    <td><?php echo $value4['utility']; ?></td>
+                                                    <td><?php echo $al->kode_alternatif; ?></td>
+                                                    <td><?php echo $al_values_u[0]->utility ?></td>
+                                                    <td><?php echo $al_values_u[1]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[2]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[3]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[4]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[5]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[6]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[7]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[8]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[9]->utility; ?></td>
+                                                    <td><?php echo $al_values_u[10]->utility; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -208,25 +462,45 @@
                                         <thead>
                                             <tr>
                                                 <th>Ranking</th>
-                                                <th>Nama Alternatif</th>
-                                                <th>Nama Kriteria</th>
-                                                <th>Nama Sub Kriteria</th>
-                                                <th>Nilai Utility</th>
-                                                <th>Nilai Akhir</th>
+                                                <th>Alternatif</th>
+                                                <th>C1</th>
+                                                <th>C2</th>
+                                                <th>C3</th>
+                                                <th>C4</th>
+                                                <th>C5</th>
+                                                <th>C6</th>
+                                                <th>C7</th>
+                                                <th>C8</th>
+                                                <th>C9</th>
+                                                <th>C10</th>
+                                                <th>C11</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php $no = 0;
-                                            foreach ($last_results as $key5 => $value5) {
+                                            foreach ($alternatives as $key5 => $value5) {
                                                 $no++;
+                                            ?>
+                                            <?php 
+                                                $CI =& get_instance();
+                                                $CI->load->model(['LastValueModel', 'AlternativeModel']);
+                                                $al = $CI->AlternativeModel->getById($value5->id)->row(); 
+                                                $al_values_last = $CI->LastValueModel->getByIds($value5->id)->result();
                                             ?>
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
-                                                    <td><?php echo $value5['nama_alternatif']; ?></td>
-                                                    <td><?php echo $value5['nama_kriteria']; ?></td>
-                                                    <td><?php echo $value5['nama_sub_kriteria']; ?></td>
-                                                    <td><?php echo $value5['utility']; ?></td>
-                                                    <td><?php echo $value5['last_result']; ?></td>
+                                                    <td><?php echo $al->kode_alternatif; ?></td>
+                                                    <td><?php echo $al_values_last[0]->last_result ?></td>
+                                                    <td><?php echo $al_values_last[1]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[2]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[3]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[4]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[5]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[6]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[7]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[8]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[9]->last_result; ?></td>
+                                                    <td><?php echo $al_values_last[10]->last_result; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>

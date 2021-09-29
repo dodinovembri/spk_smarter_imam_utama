@@ -7,7 +7,7 @@ class RankingController extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('function');
-        $this->load->model(['AlternativeValueModel', 'SubCriteriaModel', 'CriteriaModel']);
+        $this->load->model(['AlternativeValueModel', 'SubCriteriaModel', 'CriteriaModel', 'AlternativeModel', 'UtilityValueModel', 'LastValueModel']);
 
         if ($this->session->userdata('logged_in') != 1) {
             return redirect(base_url('login'));
@@ -49,9 +49,11 @@ class RankingController extends CI_Controller {
                 'nama_sub_kriteria' => $nama_sub_kriteria, 
                 'utility' => $utility
             );
+
             array_push($utility_values, $data);
 
         }
+
 
         /**
          * last result
@@ -148,8 +150,8 @@ class RankingController extends CI_Controller {
 	public function smarter()
 	{
         $alternative_values = $this->AlternativeValueModel->getWithBuilderAll()->result();
-
-
+        $this->UtilityValueModel->destroyAll();
+        $this->LastValueModel->destroyAll();
         /**
          * utility value 
         */ 
@@ -180,6 +182,16 @@ class RankingController extends CI_Controller {
                 'nama_sub_kriteria' => $nama_sub_kriteria, 
                 'utility' => $utility
             );
+            
+            $data2 = array(
+                'id_alternatif' => $id_alternatif, 
+                'id_kriteria' => $id_kriteria, 
+                'id_sub_kriteria' => $id_sub_kriteria, 
+                'utility' => $utility
+            );
+
+            $this->UtilityValueModel->insert($data2);
+
             array_push($utility_values, $data);
 
         }
@@ -210,6 +222,16 @@ class RankingController extends CI_Controller {
                 'utility' => $utility,
                 'last_result' => $last_result
             );
+
+            $data33 = array(
+                'id_alternatif' => $id_alternatif, 
+                'id_kriteria' => $id_kriteria, 
+                'id_sub_kriteria' => $id_sub_kriteria, 
+                'last_result' => $utility
+            );
+
+            $this->LastValueModel->insert($data33);
+
             array_push($last_results, $data_last_result);
             
         }
@@ -268,13 +290,17 @@ class RankingController extends CI_Controller {
                 }
             }
         } 
-        
+        // print_r(json_encode($utility_values));
+        // die;
         $data['criterias'] = $this->CriteriaModel->get(1)->result();
         $data['sub_criterias'] = $this->CriteriaModel->getWithBuilder()->result();
         $data['utility_values'] = $utility_values;
         $data['last_results'] = $last_results;
         $data['total_last_result_per_alternative'] = $total_last_result_per_alternative;
         $data['total_last_result_per_alternatives'] = $total_last_result_per_alternative;
+        $data['alternative_values'] = $this->AlternativeValueModel->getWithBuilderAll()->result();
+        $data['alternatives'] = $this->AlternativeModel->get(1)->result();
+
         
         $this->load->view('templates/header');
 		$this->load->view('ranking/smarter', $data);

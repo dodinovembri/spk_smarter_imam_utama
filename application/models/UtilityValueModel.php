@@ -1,8 +1,8 @@
 <?php
 
-class AlternativeModel extends CI_Model
+class UtilityValueModel extends CI_Model
 {
-    private $_table = "alternatif";
+    private $_table = "nilai_utility";
 
     public function get($status = NULL)
     {
@@ -23,6 +23,12 @@ class AlternativeModel extends CI_Model
         return $this->db->get($this->_table);
     }  
 
+    public function getByIds($id)
+    {
+        $this->db->where('id_alternatif', $id);
+        return $this->db->get($this->_table);
+    }     
+
     public function update($data, $id)
     {
         $this->db->where('id', $id);
@@ -34,6 +40,12 @@ class AlternativeModel extends CI_Model
         $this->db->where('id', $id);
         return $this->db->delete($this->_table);
     } 
+
+    public function destroyAll()
+    {
+        return $this->db->query("TRUNCATE table $this->_table");
+    }
+
     public function check_auth($username, $password)
     {
         $this->db->where('email', $username);
