@@ -53,11 +53,12 @@
                                                     <td><?php echo $value->kode_kriteria; ?></td>
                                                     <td><?php echo $value->nama_kriteria; ?></td>
                                                     <td><?php echo $value->prioritas; ?></td>
-                                                    <td><?php echo $value->bobot; ?></td>
+                                                    <td><?php echo (round($value->bobot, 3)); ?></td>
                                                     <td><?php echo check_status($value->status); ?></td>
                                                     <td class="last">
                                                         <?php if ($value->status == 1) { ?>
-                                                            <a href="<?php echo base_url('sub_criterias/'); echo $value->id; ?>"><button class="form-control" style="width: 60px;">Pilih</button></a>
+                                                            <a href="<?php echo base_url('sub_criterias/');
+                                                                        echo $value->id; ?>"><button class="form-control" style="width: 60px;">Pilih</button></a>
                                                         <?php } ?>
                                                     </td>
                                                 </tr>

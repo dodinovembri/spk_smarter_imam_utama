@@ -54,8 +54,8 @@
                                                     <td><?php echo $no; ?></td>
                                                     <td><?php echo $query->row()->kode_alternatif; ?></td>
                                                     <td><?php echo $query->row()->nama_alternatif; ?></td>
-                                                    <td><?php echo $value['total_each_last_result']; ?></td>
-                                                    <td><?php echo $value['total_each_last_result'] * 100; ?></td>
+                                                    <td><?php echo (round($value['total_each_last_result'], 3)); ?></td>
+                                                    <td><?php echo (round($value['total_each_last_result'] * 100, 3)); ?>%</td>
                                                     <td>
                                                         <a href="<?php echo base_url('alternative/show/');
                                                                     echo $query->row()->id; ?>"><span class="glyphicon glyphicon-eye-open"></span></a>

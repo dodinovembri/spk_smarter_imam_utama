@@ -65,7 +65,7 @@
                                                     </td>
                                                     <td><?php echo $value->nama_kriteria; ?></td>
                                                     <td><?php echo $value->prioritas; ?></td>
-                                                    <td><?php echo $value->bobot; ?></td>
+                                                    <td><?php echo (round($value->bobot, 3)); ?></td>
                                                     <td><?php echo check_status($value->status); ?></td>
                                                     <td class="last">
                                                         <a href="<?php echo base_url('criteria/show/');
