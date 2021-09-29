@@ -194,17 +194,17 @@
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
                                                     <td><?php echo $al->kode_alternatif; ?></td>
-                                                    <td><?php echo $al_values[0]->nama_kriteria ?></td>
-                                                    <td><?php echo $al_values[1]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[2]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[3]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[4]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[5]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[6]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[7]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[8]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[9]->nama_kriteria; ?></td>
-                                                    <td><?php echo $al_values[10]->nama_kriteria; ?></td>
+                                                    <td><?php echo $al_values[0]->nama_sub_kriteria ?></td>
+                                                    <td><?php echo $al_values[1]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[2]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[3]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[4]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[5]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[6]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[7]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[8]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[9]->nama_sub_kriteria; ?></td>
+                                                    <td><?php echo $al_values[10]->nama_sub_kriteria; ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
