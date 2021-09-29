@@ -96,7 +96,7 @@
                                                     <td><?php echo $value2->kode_kriteria; ?></td>
                                                     <td><?php echo $value2->nama_kriteria; ?></td>
                                                     <td><?php echo $value2->prioritas; ?></td>
-                                                    <td><?php echo $value2->bobot; ?></td>
+                                                    <td><?php echo (round($value2->bobot, 3)); ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -140,7 +140,7 @@
                                                     <td><?php echo $value3->nama_kriteria; ?></td>
                                                     <td><?php echo $value3->nama_sub_kriteria; ?></td>
                                                     <td><?php echo $value3->prioritas; ?></td>
-                                                    <td><?php echo $value3->bobot; ?></td>
+                                                    <td><?php echo (round($value3->bobot, 3)); ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -269,7 +269,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[0]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -279,7 +279,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[1]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -289,7 +289,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[2]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -299,7 +299,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[3]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -309,7 +309,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[4]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -319,7 +319,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[5]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -329,7 +329,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[6]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -339,7 +339,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[7]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -349,7 +349,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[8]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -359,7 +359,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[9]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                     <td>
@@ -369,7 +369,7 @@
                                                         $al9 = $CI->AlternativeModel->getById($value9->id)->row();
                                                         $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result();
                                                         $sub_criteria = $CI->SubCriteriaModel->getById($al_val[10]->id_sub_kriteria)->row();
-                                                        echo $sub_criteria->bobot
+                                                        echo (round($sub_criteria->bobot, 3));
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -428,17 +428,17 @@
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
                                                     <td><?php echo $al->kode_alternatif; ?></td>
-                                                    <td><?php echo $al_values_u[0]->utility ?></td>
-                                                    <td><?php echo $al_values_u[1]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[2]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[3]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[4]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[5]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[6]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[7]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[8]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[9]->utility; ?></td>
-                                                    <td><?php echo $al_values_u[10]->utility; ?></td>
+                                                    <td><?php echo (round($al_values_u[0]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[1]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[2]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[3]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[4]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[5]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[6]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[7]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[8]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[9]->utility, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_u[10]->utility, 3)); ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -494,17 +494,17 @@
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
                                                     <td><?php echo $al->kode_alternatif; ?></td>
-                                                    <td><?php echo $al_values_last[0]->last_result ?></td>
-                                                    <td><?php echo $al_values_last[1]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[2]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[3]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[4]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[5]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[6]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[7]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[8]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[9]->last_result; ?></td>
-                                                    <td><?php echo $al_values_last[10]->last_result; ?></td>
+                                                    <td><?php echo (round($al_values_last[0]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[1]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[2]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[3]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[4]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[5]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[6]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[7]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[8]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[9]->last_result, 3)); ?></td>
+                                                    <td><?php echo (round($al_values_last[10]->last_result, 3)); ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -546,7 +546,7 @@
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
                                                     <td><?php echo $query6->row()->nama_alternatif; ?></td>
-                                                    <td><?php echo $value6['total_each_last_result']; ?></td>
+                                                    <td><?php echo (round($value6['total_each_last_result'], 3)); ?></td>
                                                 </tr>
                                             <?php } ?>
                                         </tbody>
@@ -590,8 +590,8 @@
                                                 <tr>
                                                     <td><?php echo $no; ?></td>
                                                     <td><?php echo $query7->row()->nama_alternatif; ?></td>
-                                                    <td><?php echo $value7['total_each_last_result']; ?></td>
-                                                    <td><?php echo $value7['total_each_last_result'] * 100; ?></td>
+                                                    <td><?php echo (round($value7['total_each_last_result'], 3)); ?></td>
+                                                    <td><?php echo (round($value7['total_each_last_result'] * 100, 3)); ?> %</td>
                                                     <td>
                                                         <a href="<?php echo base_url('alternative/show/');
                                                                     echo $value7['id_alternatif']; ?>"><span class="glyphicon glyphicon-eye-open"></span></a>
