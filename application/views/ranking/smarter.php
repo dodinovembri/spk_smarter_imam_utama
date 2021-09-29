@@ -72,7 +72,8 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <center>
-                                    <h4><b>Pembobotan ROC</b></h4>
+                                    <h4><b>Pembobotan ROC</b></h4><br>
+                                    <img src="<?php echo base_url('assets/formula/roc.jpg')?>" alt="">
                                 </center>
                                 <div class="table-responsive">
                                     <table id="example14" class="table table-bordered table-striped">
@@ -115,7 +116,8 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <center>
-                                    <h4><b>Pembobotan ROC Pada Sub Kriteria</b></h4>
+                                    <h4><b>Pembobotan ROC Pada Sub Kriteria</b></h4><br>
+                                    <img src="<?php echo base_url('assets/formula/roc.jpg')?>" alt="">
                                 </center>
                                 <div class="table-responsive">
                                     <table id="example11" class="table table-bordered table-striped">
@@ -390,7 +392,8 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <center>
-                                    <h4><b>Nilai Utility</b></h4>
+                                    <h4><b>Nilai Utility</b></h4><br>
+                                    <img src="<?php echo base_url('assets/formula/utility.jpg')?>" alt="">
                                 </center>
                                 <div class="table-responsive">
                                     <table id="example5" class="table table-bordered table-striped">
@@ -455,7 +458,8 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <center>
-                                    <h4><b>Nilai Akhir Metode SMARTER</b></h4>
+                                    <h4><b>Nilai Akhir Metode SMARTER</b></h4><br>
+                                    <img src="<?php echo base_url('assets/formula/last_value.jpg')?>" alt="">
                                 </center>
                                 <div class="table-responsive">
                                     <table id="example10" class="table table-bordered table-striped">
