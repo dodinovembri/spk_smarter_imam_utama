@@ -263,111 +263,111 @@
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[0]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[0]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[1]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[1]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[2]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[2]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[3]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[3]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[4]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[4]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[5]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[5]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[6]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[6]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[7]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[7]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[8]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[8]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[9]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[9]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                     <td>
                                                         <?php 
                                                             $CI =& get_instance();
-                                                            $CI->load->model(['CriteriaModel', 'AlternativeValueModel']);
+                                                            $CI->load->model(['SubCriteriaModel', 'AlternativeValueModel']);
                                                             $al9 = $CI->AlternativeModel->getById($value9->id)->row(); 
                                                             $al_val = $CI->AlternativeValueModel->getByIds($al9->id)->result(); 
-                                                            $criteria = $CI->CriteriaModel->getById($al_val[10]->id_kriteria)->row(); 
-                                                            echo $criteria->bobot 
+                                                            $sub_criteria = $CI->SubCriteriaModel->getById($al_val[10]->id_sub_kriteria)->row(); 
+                                                            echo $sub_criteria->bobot 
                                                         ?>
                                                     </td>
                                                 </tr>
